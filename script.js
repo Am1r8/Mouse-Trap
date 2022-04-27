@@ -3,6 +3,7 @@ const timer = document.getElementById("time");
 const score1 = document.getElementById("score");
 let time = 500;
 let score = 0;
+let press = 0;
 
 function resize() {
     let size = 25 + Math.random() * 100;
@@ -33,7 +34,8 @@ function timerfunc() {
 setInterval(timerfunc, 0.1);
 
 function reset() {
-    time = 500;
+    press++;
+    time = 500 - (press * 5);
 }
 
 block.addEventListener("click", resize);
