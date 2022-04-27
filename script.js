@@ -22,7 +22,11 @@ function timerfunc() {
     time--;
     timer.innerText = time;
     if (time == 0) {
-        time = 500;
+        timer.innerText = "Game Over";
+        time = 0;
+    } else if (time < 0) {
+        timer.innerText = "Game Over";
+        time = 0;
     }
 }
 
